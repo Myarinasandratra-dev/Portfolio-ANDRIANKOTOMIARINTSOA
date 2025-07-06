@@ -1,0 +1,47 @@
+/* style.css */
+:root {
+  --bg-color: #010208;
+  --text-color: #ffffff;
+  --accent-color: #f72585;
+  --mobile-menu-bg: #261183;
+  --highlight: #adb5bd;
+  --font-main: "Segoe UI", sans-serif;
+  --max-width: 1920px;
+  --transition-speed: 0.3s;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.App {
+  /*padding-left: 120px;
+  padding-right: 120px;
+  position: relative;
+  flex: 6; /* prend tout l’espace disponible */
+  padding-bottom: 50px; /* pour donner de l'air en bas si besoin */
+  width: 100%;
+}
+.page-container {
+  background-color: #010208;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.padding-footer {
+  height: 250px; /* même hauteur que ton footer */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

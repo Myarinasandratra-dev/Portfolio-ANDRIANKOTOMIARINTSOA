@@ -1,0 +1,42 @@
+.clients {
+  padding: 3.5rem;
+  overflow: hidden;
+  background-color: #010208;
+}
+
+.logos-slider {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+p {
+  justify-content: center;
+  display: flex;
+}
+
+.logos-track {
+  display: flex;
+  width: max-content;
+}
+
+.logo-item {
+  flex: 0 0 auto;
+  padding: 0 2rem;
+}
+
+.logo-item img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+/*
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+*/

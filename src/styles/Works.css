@@ -1,0 +1,96 @@
+.works {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.work-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+h2 {
+  justify-content: center;
+  display: flex;
+}
+
+.work {
+  background: #020114;
+  padding: 10rem;
+  border-radius: 8px;
+  display: flex;
+  width: 22%; /* ajustable */
+  min-width: 250px;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.work-info a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.cards {
+  position: relative;
+}
+.cards__inner {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5em;
+  gap: 2em;
+}
+.card {
+  flex: 1 1 14rem;
+  padding: 1.5em;
+  background: var(--bg-color);
+  border: 1px solid #eceff133;
+  border-radius: 15px;
+  position: relative;
+  z-index: 1;
+  transition: background 0.3s ease;
+}
+
+.text_work {
+  flex-direction: column; /* aligne verticalement */
+  gap: 20px;
+}
+.text_work h3,
+.text_work p {
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  background: rgba(240, 31, 188, 0.05);
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  user-select: none;
+  opacity: var(--opacity, 0);
+  mask: radial-gradient(
+    25rem 25rem at var(--x) var(--y),
+    #e04b4b 1%,
+    transparent 50%
+  );
+  -webkit-mask: radial-gradient(
+    25rem 25rem at var(--x) var(--y),
+    #0d8ed8 1%,
+    transparent 50%
+  );
+  transition: 400ms mask ease;
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .work-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .work-items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,75 @@
+/*🎯 Objectif de l’exemple : Faire un bouton qui change le texte quand on clique
+dessus. Par exemple : Texte affiché : "Bonjour" On clique ➡️ devient "Bonsoir"
+On reclique ➡️ redevient "Bonjour" (toggle) 🔧 Version 1 : En JavaScript pur
+(avec DOM) html Copier Modifier
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS DOM</title>
+  </head>
+  <body>
+    <h1 id="greeting">Bonjour</h1>
+    <button id="toggleBtn">Changer</button>
+
+    <script>
+      const greeting = document.getElementById("greeting");
+      const button = document.getElementById("toggleBtn");
+
+      button.addEventListener("click", () => {
+        if (greeting.textContent === "Bonjour") {
+          greeting.textContent = "Bonsoir";
+        } else {
+          greeting.textContent = "Bonjour";
+        }
+      });
+    </script>
+  </body>
+</html>
+🧠 Ce que fait ce code : On utilise getElementById pour accéder aux éléments
+HTML. On change le texte de
+<h1>
+  manuellement. On utilise un addEventListener. ⚛️ Version 2 : En React avec
+  useState jsx Copier Modifier import React, { useState } from "react"; function
+  GreetingToggle() { const [message, setMessage] = useState("Bonjour"); const
+  toggleMessage = () => { setMessage(prev => prev === "Bonjour" ? "Bonsoir" :
+  "Bonjour"); }; return (
+  <div>
+    <h1>{message}</h1>
+    <button onClick="{toggleMessage}">Changer</button>
+  </div>
+  ); } export default GreetingToggle; 🧠 Ce que fait ce code React : Partie Rôle
+  useState("Bonjour") Crée une variable d’état message qui vaut "Bonjour" au
+  départ setMessage(...) Permet de changer la valeur de message {message}
+  Affiche dynamiquement le message dans le JSX onClick={toggleMessage} Quand tu
+  cliques sur le bouton, la fonction toggleMessage est exécutée ✅ Avantages
+  React : Pas besoin de getElementById Pas besoin de modifier le DOM
+  manuellement → React le fait automatiquement quand le state change Plus
+  propre, plus facile à maintenir Souhaites-tu un exemple encore plus visuel
+  (par ex. menu, compteur, ou toggle de carte) ? Je peux aussi te faire une
+  version CodeSandbox pour tester en ligne. Vous avez dit : donc si je comprends
+  Usestate c'est sorte de garage pour juste stocker la valeur initiale ChatGPT a
+  dit : 🔥 Très bonne question, et ta comparaison est presque juste, mais voyons
+  comment la rendre encore plus précise. 🚗 Analogie du garage (ta version) :
+  useState = un garage pour stocker une valeur initiale ✅ Oui, c’est vrai pour
+  la valeur initiale, mais le garage ne reste pas figé. C’est un garage
+  intelligent : ✅ Version améliorée : useState = un garage + tableau de bord +
+  télécommande Il te donne 2 choses : js Copier Modifier const [valeur,
+  setValeur] = useState("Bonjour"); 🧱 1. valeur → l’état actuel Comme une
+  voiture garée dans ton garage. C’est ce que tu affiches dans ton interface
+  (par exemple : un texte, un nombre, une image, etc.) 🎛️ 2. setValeur() → la
+  télécommande Elle sert à changer la voiture dans le garage, et automatiquement
+  React met à jour l’écran ! ⚠️ Différence avec une variable simple : js Copier
+  Modifier let nom = "Jean"; nom = "Marie"; // Ne met pas à jour l'affichage en
+  React ⛔ React ne réagit pas au changement de simple variable. ✅ Avec
+  useState, React réagit et re-render (re-dessine l’interface) : js Copier
+  Modifier const [nom, setNom] = useState("Jean"); setNom("Marie"); // React met
+  à jour l'écran automatiquement 🎯 Exemple simple pour mémoriser : jsx Copier
+  Modifier const [count, setCount] = useState(0); Élément Rôle count 🧠 Mémoire
+  (valeur actuelle) setCount(1) 🔁 Change la valeur, met à jour l’écran
+  useState(0) 📦 Valeur initiale dans le "garage" 📌 Résumé visuel : Ce que
+  useState fait À quoi ça sert Stocker une valeur Un texte, un nombre, un
+  booléen Suivre son évolution Par clic, saisie, événement Refaire l'affichage
+  automatiquement Pas besoin de getElementById ni innerText
+</h1>

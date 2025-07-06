@@ -1,0 +1,99 @@
+.home {
+  background-color: #010208;
+  height: 800px;
+  padding: 60px 0;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.avatar {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 1rem auto;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 316px;
+}
+
+h1 {
+  color: #e3e4e6;
+  align-items: center;
+  font-size: 60px;
+}
+
+.highlight {
+  color: #f72585;
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  position: relative;
+  padding: 1.5rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  min-width: 200px;
+  z-index: 1;
+}
+
+/* Magnetic Field Button */
+.magnetic {
+  background: #f72585;
+  border: none;
+  overflow: visible;
+}
+
+.particles-field {
+  position: absolute;
+  inset: -100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.magnetic:hover .particles-field {
+  opacity: 1;
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translate(var(--x), var(--y)) scale(0);
+  }
+  50% {
+    transform: translate(calc(var(--x) * -1), calc(var(--y) * -1)) scale(1);
+  }
+  100% {
+    transform: translate(var(--x), var(--y)) scale(0);
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+}
