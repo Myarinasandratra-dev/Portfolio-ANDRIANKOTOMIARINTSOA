@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "../styles/Hero.css";
+import avatarImg from "../assets/pdp.jpg";
 
 function Hero() {
   const particleRef = useRef(null);
@@ -22,10 +23,22 @@ function Hero() {
     }
   }, []);
 
+  const handleDiscoverClick = (e) => {
+    e.preventDefault();
+    const targetSection = document.getElementById("decouvrir");
+    if (targetSection) {
+      const offsetTop = targetSection.offsetTop - 80; // Ajustement pour le header
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <div className="home">
       <section className="hero">
-        <div className="avatar"></div>
+        <img src={avatarImg} alt="Mon Avatar" className="avatar" />
         <div className="container">
           <h1>
             Graphiste, Web Designer et Développeur Front-End : <br />{" "}
@@ -34,7 +47,11 @@ function Hero() {
         </div>
       </section>
       <div className="center">
-        <button className="btn magnetic">
+        <button
+          className="btn magnetic"
+          onClick={handleDiscoverClick}
+          style={{ cursor: "pointer" }}
+        >
           <span>Découvrir maintenant</span>
           <div className="particles-field" ref={particleRef}></div>
         </button>

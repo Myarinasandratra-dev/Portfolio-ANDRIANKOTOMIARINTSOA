@@ -1,10 +1,10 @@
 // src/App.jsx
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import ContactFrom from "./components/ContactFrom";
+import Contact from "./pages/Contact";
 import "./styles/style.css";
 
 function App() {
@@ -13,10 +13,10 @@ function App() {
       <div className="App">
         <div className="page-container">
           <Header />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/ContactFrom " element={<ContactFrom />} />
-          </Routes>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/Contact" component={Contact} />
+          </Switch>
         </div>
         <div className="padding-footer">
           <Footer />

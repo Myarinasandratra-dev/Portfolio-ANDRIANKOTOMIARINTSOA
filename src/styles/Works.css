@@ -4,6 +4,13 @@
   padding: 3rem 0;
 }
 
+.text_work .icon {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
 .work-items {
   display: flex;
   flex-wrap: wrap;
@@ -43,12 +50,20 @@ h2 {
 .card {
   flex: 1 1 14rem;
   padding: 1.5em;
-  background: var(--bg-color);
-  border: 1px solid #eceff133;
-  border-radius: 15px;
+  background: #ffffff0d;
+  border-radius: 16px;
   position: relative;
   z-index: 1;
   transition: background 0.3s ease;
+}
+.text_work a {
+  color: #f72585; /* couleur rose */
+  text-decoration: none; /* optionnel : enlève le soulignement */
+  transition: color 0.3s ease; /* pour un effet smooth au survol */
+}
+
+.text_work a:hover {
+  color: #ff4aad; /* optionnel : un rose plus clair au survol */
 }
 
 .text_work {

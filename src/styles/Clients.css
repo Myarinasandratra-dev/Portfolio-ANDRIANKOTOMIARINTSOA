@@ -5,6 +5,8 @@
 }
 
 .logos-slider {
+  margin-top: 5em;
+  margin-bottom: 5em;
   overflow: hidden;
   width: 100%;
   position: relative;

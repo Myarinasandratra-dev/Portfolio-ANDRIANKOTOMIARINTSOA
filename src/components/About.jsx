@@ -6,7 +6,7 @@ import img3 from "../assets/football.jpg";
 
 function About() {
   return (
-    <section className="about-section">
+    <section id="competences" className="about-section">
       <div className="about-content">
         <div className="text-left">
           <h4>UN PEU DE MOI</h4>

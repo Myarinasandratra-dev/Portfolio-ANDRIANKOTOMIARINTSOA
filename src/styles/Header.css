@@ -1,3 +1,4 @@
+/* Header.css */
 header {
   position: sticky;
   top: 0;
@@ -16,21 +17,52 @@ header {
   font-size: 1.5rem;
 }
 
+/* Navigation */
 .nav-links {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
+  align-items: center; /* centre liens et bouton verticalement */
 }
 
-.nav-links a {
+.nav-link {
   color: var(--text-color);
   text-decoration: none;
-  transition: color var(--transition-speed);
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
-.nav-links a:hover {
-  color: var(--accent-color);
+.nav-link:hover {
+  color: #f72585; /* rose au hover */
+  transform: scale(1.05); /* léger zoom au hover */
 }
 
+/* Conteneur bouton */
+.btn-container {
+  display: flex;
+  align-items: center;
+}
+
+.btn-container .btn {
+  margin-left: 1rem; /* espace entre liens et bouton */
+  background: #f72585;
+  border: none;
+  overflow: visible;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-container .btn:hover {
+  background: #ff4aad; /* rose plus clair au hover */
+  transform: scale(1.05);
+}
+
+/* Hamburger et close button */
 .hamburger,
 .close-btn {
   background: none;
@@ -41,10 +73,42 @@ header {
   display: none;
 }
 
-.button-contenair {
-  align-content: center;
+/* Magnetic Field overlay */
+.particles-field-header {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  width: 100%;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
+/* particles */
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.magnetic:hover .particles-field-header {
+  opacity: 1;
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translate(var(--x), var(--y)) scale(0);
+  }
+  50% {
+    transform: translate(calc(var(--x) * -1), calc(var(--y) * -1)) scale(1);
+  }
+  100% {
+    transform: translate(var(--x), var(--y)) scale(0);
+  }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -61,6 +125,7 @@ header {
     align-items: center;
     justify-content: center;
     transition: right var(--transition-speed);
+    gap: 2rem;
   }
 
   .nav-links.active {
@@ -70,6 +135,10 @@ header {
   .nav-links a {
     font-size: 1.5rem;
     margin: 1rem 0;
+  }
+
+  .btn-container {
+    margin-top: 2rem; /* espace entre liens et bouton */
   }
 
   .close-btn {

@@ -17,7 +17,7 @@ function Footer() {
   return (
     <footer>
       <h2>
-        Get <strong>in Touch</strong>.
+        <strong>Myari N'asandratra</strong>.
       </h2>
       <div className="socials">
         <a href="#">
@@ -30,7 +30,7 @@ function Footer() {
           <i className="icon">in</i>
         </a>
       </div>
-      <p>Myari N'asandratra </p>
+      <p>Copyrith 2025 </p>
     </footer>
   );
 }

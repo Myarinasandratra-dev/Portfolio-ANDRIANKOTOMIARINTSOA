@@ -1,6 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import "../styles/Clients.css";
+import thirtyone from "../assets/thirtyone.png";
+import ferber from "../assets/ferber.png";
+import netykom from "../assets/netykom.png";
 
 function Clients() {
   const logosRef = useRef(null);
@@ -20,13 +23,13 @@ function Clients() {
   }, []);
 
   const logos = [
-    { src: "/logos/airbnb.png", alt: "Thirty-one" },
-    { src: "/logos/google.png", alt: "FerberEnterprise" },
-    { src: "/logos/microsoft.png", alt: "Netykom" },
+    { src: thirtyone, alt: "Thirty-one" },
+    { src: ferber, alt: "FerberEnterprise" },
+    { src: netykom, alt: "Netykom" },
   ];
 
   return (
-    <section className="clients" ref={logosRef}>
+    <section id="decouvrir" className="clients" ref={logosRef}>
       <p>
         J’ai travaillé avec <strong>plusieurs sociétés</strong> sur des projets
         de design et de développement web.
