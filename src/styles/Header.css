@@ -17,6 +17,12 @@ header {
   font-size: 1.5rem;
 }
 
+.btn {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
 /* Navigation */
 .nav-links {
   display: flex;
@@ -60,6 +66,16 @@ header {
 .btn-container .btn:hover {
   background: #ff4aad; /* rose plus clair au hover */
   transform: scale(1.05);
+}
+
+.magnetic-cv {
+  padding: 10px 30px;
+  background: transparent; /* pas de fond */
+  color: #e3e4e6; /* couleur du texte */
+  border: 2px solid #25f741; /* contour du bouton */
+  border-radius: 50px; /* arrondi style "pilule" */
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /* Hamburger et close button */
@@ -120,12 +136,12 @@ header {
     right: -100%;
     width: 70%;
     height: 100vh;
-    background: #e53d3d;
+    background: #0e0e16;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: right var(--transition-speed);
-    gap: 2rem;
+    gap: 2px;
   }
 
   .nav-links.active {

@@ -1,6 +1,10 @@
 import React from "react";
 import ContactForm from "../components/ContactForm";
 import "../styles/Contact.css";
+import { MdPhoneIphone } from "react-icons/md";
+import { BiLogoGmail } from "react-icons/bi";
+import { FaLocationArrow } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa6";
 
 const Contact = () => {
   return (
@@ -17,24 +21,48 @@ const Contact = () => {
           <div className="contact-info">
             <h2>Informations de contact</h2>
             <div className="info-item">
-              <span className="info-icon">📧</span>
+              <span className="info-icon">
+                <BiLogoGmail />
+              </span>
               <div>
                 <h3>Email</h3>
-                <p>myari.nasandratra@example.com</p>
+                <p>andriankotomiarintsoa24@gmail.com</p>
               </div>
             </div>
             <div className="info-item">
-              <span className="info-icon">📱</span>
+              <span className="info-icon">
+                <MdPhoneIphone />
+              </span>
+              <div className="phone-info">
+                <h3>Téléphone/whatsApp</h3>
+                <p>+261 34 56 856 92</p>
+              </div>
+            </div>
+            <div className="info-item">
+              <span className="info-icon">
+                <FaLinkedin />
+              </span>
               <div>
-                <h3>Téléphone</h3>
-                <p>+33 6 12 34 56 78</p>
+                <h3>LinkedIn</h3>
+                <p>
+                  <a
+                    href="https://www.linkedin.com/in/nasandratra-andriankotomiarintsoa-115206358/" // remplace par ton URL LinkedIn
+                    target="_blank" // ouvre dans un nouvel onglet
+                    rel="noopener noreferrer" // sécurité
+                    className="linkedin-link"
+                  >
+                    Nasandratra Andriankotomiarintsoa
+                  </a>
+                </p>
               </div>
             </div>
             <div className="info-item">
-              <span className="info-icon">📍</span>
+              <span className="info-icon">
+                <FaLocationArrow />
+              </span>
               <div>
                 <h3>Localisation</h3>
-                <p>Paris, France</p>
+                <p>Antananarivo,Madagascar</p>
               </div>
             </div>
           </div>

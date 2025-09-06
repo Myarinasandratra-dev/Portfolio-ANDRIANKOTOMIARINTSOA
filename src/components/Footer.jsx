@@ -7,7 +7,7 @@ function Footer() {
 
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      footer.style.transform = `translateY(${scrollY * -0}px)`; // parallax vers le bas
+      footer.style.transform = `translateY(${scrollY * -0}px)`; // effet parallax
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -16,21 +16,18 @@ function Footer() {
 
   return (
     <footer>
-      <h2>
-        <strong>Myari N'asandratra</strong>.
-      </h2>
-      <div className="socials">
-        <a href="#">
-          <i className="icon">Bē</i>
-        </a>
-        <a href="#">
-          <i className="icon">@</i>
-        </a>
-        <a href="#">
-          <i className="icon">in</i>
-        </a>
+      <div className="footer-background"></div>
+      <div className="footer-content">
+        <h2>
+          <strong>Myari N&apos;asandratra</strong>.
+        </h2>
+
+        {/* ✅ nouveau texte descriptif */}
+        <p></p>
+        <p className="footer-role">UI/UX – Dev Front-End & Graphiste</p>
+
+        <p>© Copyright 2025</p>
       </div>
-      <p>Copyrith 2025 </p>
     </footer>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import "../styles/Header.css";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -36,13 +37,9 @@ function Header() {
         <Link to="/" className="nav-link" onClick={(e) => handleLinkClick(e)}>
           Accueil
         </Link>
-        <a
-          href="#work"
-          className="nav-link"
-          onClick={(e) => handleLinkClick(e, "work")}
-        >
-          Compétences
-        </a>
+        <HashLink smooth to="/#work" className="nav-link" onClick={closeMenu}>
+          Compétences & Projets
+        </HashLink>
         <Link
           to="/Contact"
           className="nav-link"
@@ -51,10 +48,13 @@ function Header() {
           Contact
         </Link>
 
-        <button className="btn magnetic">
+        <a
+          href="./cv-andriankotomiarintsoa.pdf"
+          download="CV-Andriankotomiarintsoa"
+          className="btn magnetic"
+        >
           <span>Télécharger CV</span>
-          <div className="particles-field-header" ref={particleRef}></div>
-        </button>
+        </a>
       </nav>
       <button className="hamburger" onClick={toggleMenu}>
         ☰

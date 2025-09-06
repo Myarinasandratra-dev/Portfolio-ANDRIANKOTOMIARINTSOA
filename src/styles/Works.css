@@ -11,6 +11,11 @@
   vertical-align: middle;
 }
 
+.paragraphe {
+  text-align: left;
+  padding-bottom: 28px;
+}
+
 .work-items {
   display: flex;
   flex-wrap: wrap;

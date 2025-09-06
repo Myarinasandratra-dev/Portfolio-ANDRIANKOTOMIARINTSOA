@@ -30,11 +30,7 @@ function Clients() {
 
   return (
     <section id="decouvrir" className="clients" ref={logosRef}>
-      <p>
-        J’ai travaillé avec <strong>plusieurs sociétés</strong> sur des projets
-        de design et de développement web.
-      </p>
-
+      <h2>Quelques entreprises avec lesquelles j’ai collaboré</h2>
       <div className="logos-slider">
         <div className="logos-track">
           {[...logos, ...logos].map((logo, index) => (

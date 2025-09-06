@@ -12,11 +12,6 @@
   position: relative;
 }
 
-p {
-  justify-content: center;
-  display: flex;
-}
-
 .logos-track {
   display: flex;
   width: max-content;
@@ -33,6 +28,31 @@ p {
   object-fit: contain;
 }
 
+.text-container {
+  max-width: 600px; /* largeur max sur grand écran */
+  margin: 0 auto; /* centre */
+  padding: 0 15px; /* espace sur mobile */
+  text-align: center; /* texte centré */
+}
+
+.text-container p {
+  word-break: normal; /* pas de coupure moche */
+  white-space: normal; /* retour à la ligne naturel */
+  line-height: 1.6; /* lisible */
+  font-size: 16px; /* taille mobile par défaut */
+}
+p {
+  word-break: normal !important; /* empêche les coupures moches */
+  white-space: normal !important; /* laisse le texte aller à la ligne normalement */
+  line-height: 1.6; /* plus d’air entre les lignes */
+}
+
+/* Sur les écrans larges (desktop/tablette) */
+@media (min-width: 768px) {
+  .text-container p {
+    font-size: 18px; /* un peu plus grand sur PC */
+  }
+}
 /*
 .logos {
   display: flex;

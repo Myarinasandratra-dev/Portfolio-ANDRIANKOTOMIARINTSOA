@@ -1,31 +1,36 @@
 footer {
   text-align: center;
-  padding: 2rem 0;
-  position: fixed;
-  bottom: 0;
-  padding-left: 50px;
-  background: #0e0e16;
+  padding: 1rem 0;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 250px;
-  pointer-events: none; /* si tu veux qu'il ne gêne pas le scroll */
-  z-index: -1;
+  background: #0e0e16;
+  pointer-events: none;
+  z-index: -1; /* ✅ gardé derrière pour l'effet parallax */
 }
 
-footer .socials {
-  margin: 1rem 0;
+/* contenu au-dessus */
+.footer-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+  padding: 50px;
+  pointer-events: auto;
 }
-
-footer .icon {
-  margin: 0 0.5rem;
-  font-size: 1.5rem;
-  color: var(--highlight);
-  cursor: pointer;
-  transition: color var(--transition-speed);
+.footer-content p {
+  opacity: 0.5;
+}
+.footer-role {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  margin-bottom: 40px;
 }
 
 footer .icon:hover {
   color: var(--accent-color);
+  transform: scale(1.1);
 }

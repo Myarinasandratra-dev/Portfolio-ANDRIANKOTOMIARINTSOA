@@ -1,62 +1,73 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
-  // State pour stocker les valeurs des champs du formulaire
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    nom: "",
+    sujet: "",
     email: "",
     message: "",
   });
 
-  // Gestionnaire de changement pour mettre à jour les valeurs des champs
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
+    setFormData((prev) => ({
+      ...prev,
       [name]: value,
     }));
   };
 
-  // Gestionnaire de soumission du formulaire
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Vous pouvez insérer ici le code pour soumettre les données à votre serveur ou effectuer d'autres actions.
-    console.log(formData);
-    // Réinitialiser le formulaire après la soumission
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      message: "",
-    });
+
+    // Envoyer les données à EmailJS
+    emailjs
+      .send(
+        "service_42ypjba", // Service ID
+        "template_lvj11ki", //  ID EmailJS
+        formData,
+        "2L_UTku-LOJKmpeii" //  EmailJS
+      )
+      .then(
+        (result) => {
+          console.log("Email envoyé avec succès !", result.text);
+          alert("Message envoyé !");
+          setFormData({ nom: "", sujet: "", email: "", message: "" });
+        },
+        (error) => {
+          console.log("Erreur :", error.text);
+          alert("Erreur lors de l'envoi, réessaie.");
+        }
+      );
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="firstName">Prénom:</label>
+      <div className="form-group">
+        <label htmlFor="nom">Nom:</label>
         <input
           type="text"
-          id="firstName"
-          name="firstName"
-          value={formData.firstName}
+          id="nom"
+          name="nom"
+          value={formData.nom}
           onChange={handleChange}
           required
         />
       </div>
-      <div>
-        <label htmlFor="lastName">Nom:</label>
+
+      <div className="form-group">
+        <label htmlFor="sujet">Sujet:</label>
         <input
           type="text"
-          id="lastName"
-          name="lastName"
-          value={formData.lastName}
+          id="sujet"
+          name="sujet"
+          value={formData.sujet}
           onChange={handleChange}
           required
         />
       </div>
-      <div>
+
+      <div className="form-group">
         <label htmlFor="email">Email:</label>
         <input
           type="email"
@@ -67,7 +78,8 @@ const ContactForm = () => {
           required
         />
       </div>
-      <div>
+
+      <div className="form-group">
         <label htmlFor="message">Message:</label>
         <textarea
           id="message"
@@ -77,7 +89,10 @@ const ContactForm = () => {
           required
         />
       </div>
-      <button type="submit">Envoyer</button>
+
+      <button type="submit" className="btn">
+        Envoyer
+      </button>
     </form>
   );
 };

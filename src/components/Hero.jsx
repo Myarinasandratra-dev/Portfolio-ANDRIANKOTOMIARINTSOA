@@ -39,6 +39,9 @@ function Hero() {
     <div className="home">
       <section className="hero">
         <img src={avatarImg} alt="Mon Avatar" className="avatar" />
+        <div className="name">
+          <p>Mr ANDRIANKOTOMIARINTSOA Nasandratra</p>
+        </div>
         <div className="container">
           <h1>
             Graphiste, Web Designer et Développeur Front-End : <br />{" "}

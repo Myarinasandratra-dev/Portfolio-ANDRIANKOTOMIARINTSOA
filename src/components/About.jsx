@@ -10,10 +10,11 @@ function About() {
       <div className="about-content">
         <div className="text-left">
           <h4>UN PEU DE MOI</h4>
-          <p>
-            Je suis un designer UI/UX passionné par la création de expériences
-            numériques belles et joyeuses Outre le design, j'aime la musique,
-            les jeux et le football.
+          <p className="about-paragraph">
+            Mon nom c'est Mr Andriankotomiarintsoa Nasandratra , Je suis un
+            designer UI/UX passionné par la création de expériences numériques
+            belles et joyeuses Outre le design, j'aime la musique, les jeux et
+            le football.
           </p>
         </div>
         <div className="images-right">

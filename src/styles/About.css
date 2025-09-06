@@ -19,6 +19,9 @@
   flex: 1;
   min-width: 300px;
 }
+.bout-paragraph {
+  text-align: left;
+}
 
 .text-left h4 {
   font-size: 14px;

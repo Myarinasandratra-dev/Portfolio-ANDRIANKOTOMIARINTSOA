@@ -31,21 +31,19 @@ function Works() {
       title: "UI /UX",
       desc: "Passionné par le design d’interfaces, je transforme vos idées en solutions visuelles stratégiques.",
       icon: <MdOutlineWeb />,
+      link: "https://dribbble.com/nasandratra-andriankotomiarint", // 🔗 lien vers page/section UIUX
     },
     {
       title: "Graphic Design",
       desc: "Je conçois des designs uniques et captivants en mettant en avant des solutions innovantes.",
       icon: <FaPaintBrush />,
+      link: "https://www.behance.net/nasandrmiarint", // 🔗 lien vers page/section Graphic Design
     },
     {
       title: "Dev Front-End",
       desc: "Je crée des interfaces dynamiques et réactives tout en offrant une expérience fluide et optimisée.",
       icon: <FaCode />,
-    },
-    {
-      title: "Motion Design",
-      desc: "J’anime des idées captivantes en maîtrisant des outils pour donner vie à vos projets.",
-      icon: <FaFilm />,
+      link: "https://github.com/Myarinasandratra-dev", // 🔗 lien vers page/section Dev Front-End
     },
   ];
 
@@ -62,8 +60,10 @@ function Works() {
                   <h3>
                     <span className="icon">{item.icon}</span> {item.title}
                   </h3>
-                  <p>{item.desc}</p>
-                  <a href="#">Voir le travail →</a>
+                  <div className="paragraphe">{item.desc}</div>
+                  <a href={item.link} target="_blank" rel="noopener noreferrer">
+                    Voir le travail →
+                  </a>
                 </div>
               </div>
             </div>

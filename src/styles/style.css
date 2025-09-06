@@ -31,12 +31,12 @@ body {
   background-color: #010208;
   padding-left: 120px;
   padding-right: 120px;
-  max-width: 100vw;
+
   width: 100%;
 }
 
 .padding-footer {
-  height: 250px; /* même hauteur que ton footer */
+  height: 400px; /* même hauteur que ton footer */
 }
 
 * {

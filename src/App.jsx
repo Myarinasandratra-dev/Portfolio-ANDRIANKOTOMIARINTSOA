@@ -1,10 +1,10 @@
-// src/App.jsx
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
+import CustomCursor from "./components/CustomCursor"; // 👈 import
 import "./styles/style.css";
 
 function App() {
@@ -21,6 +21,9 @@ function App() {
         <div className="padding-footer">
           <Footer />
         </div>
+
+        {/* 👇 curseur lumineux */}
+        <CustomCursor />
       </div>
     </Router>
   );

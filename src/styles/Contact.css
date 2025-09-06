@@ -39,7 +39,7 @@
 .contact-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 30px;
   align-items: start;
 }
 
@@ -160,6 +160,23 @@ form button:hover {
 
 form button:active {
   transform: translateY(0);
+}
+.contact-subtitle {
+  justify-content: center;
+}
+
+.phone-info p {
+  justify-content: flex-start;
+}
+
+.linkedin-link {
+  color: var(--highlight);
+  text-decoration: none; /* ou underline si tu veux */
+  transition: color 0.3s;
+}
+
+.linkedin-link:hover {
+  color: var(--accent-color); /* change la couleur au survol */
 }
 
 /* Responsive Design */
