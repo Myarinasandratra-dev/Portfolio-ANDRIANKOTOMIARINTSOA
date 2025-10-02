@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7ed1e736.css",
+    "main.js": "/static/js/main.bef98bad.js",
+    "static/media/music.jpg": "/static/media/music.21155b1ebc7fe760e4e3.jpg",
+    "static/media/football.jpg": "/static/media/football.2f78120fc320394ec526.jpg",
+    "static/media/gaming.jpg": "/static/media/gaming.638744b6b6c1c930f06f.jpg",
+    "static/media/pdp.jpg": "/static/media/pdp.3f0165de23ed30c06495.jpg",
+    "static/media/thirtyone.png": "/static/media/thirtyone.4f51d3cfedc6241b915e.png",
+    "static/media/ferber.png": "/static/media/ferber.a0c4b4b18c3030b7af31.png",
+    "static/media/netykom.png": "/static/media/netykom.d63328e1dc1c52b90513.png",
+    "index.html": "/index.html",
+    "main.7ed1e736.css.map": "/static/css/main.7ed1e736.css.map",
+    "main.bef98bad.js.map": "/static/js/main.bef98bad.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7ed1e736.css",
+    "static/js/main.bef98bad.js"
+  ]
+}

@@ -1,31 +1,34 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
-import CustomCursor from "./components/CustomCursor"; // 👈 import
+import CustomCursor from "./components/CustomCursor";
 import "./styles/style.css";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <div className="App">
         <div className="page-container">
           <Header />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/Contact" component={Contact} />
-          </Switch>
+
+          {/* Routes React Router v6 */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/Contact" element={<Contact />} />
+          </Routes>
         </div>
+
         <div className="padding-footer">
           <Footer />
         </div>
 
-        {/* 👇 curseur lumineux */}
+        {/* Curseur lumineux */}
         <CustomCursor />
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
