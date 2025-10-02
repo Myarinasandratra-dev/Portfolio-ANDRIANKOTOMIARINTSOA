@@ -31,7 +31,7 @@ function Works() {
       title: "UI /UX",
       desc: "Passionné par le design d’interfaces, je transforme vos idées en solutions visuelles stratégiques.",
       icon: <MdOutlineWeb />,
-      link: "https://dribbble.com/nasandratra-andriankotomiarint", // 🔗 lien vers page/section UIUX
+      link: "https://www.behance.net/nasandrandrian1", // 🔗 lien vers page/section UIUX
     },
     {
       title: "Graphic Design",
