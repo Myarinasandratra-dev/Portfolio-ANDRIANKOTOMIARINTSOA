@@ -1,8 +1,7 @@
 {
-  "name": "mon-portfolio",
-  "private": true,
-  "homepage": "https://Myarinasandratra-dev.github.io/Portfolio-ANDRIANKOTOMIARINTSOA.git"
+  "name": "mon-projet",
   "version": "1.0.0",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
